@@ -20,11 +20,12 @@ public class ExemploBotao extends JFrame{
         Container tela = getContentPane();
         setLayout(null);
         icone = new ImageIcon("abrir.gif");
-        botao = new JButton("Abrir",icone);
+        botao = new JButton(icone);
         botao.setBounds(50, 20, 100, 20);
         tela.add(botao);
         setSize(400, 250);
-        setVisible(true); 
+        setVisible(true);
+        setLocationRelativeTo(null);
     }
 
     public static void main(String[] args) {
