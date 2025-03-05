@@ -5,6 +5,7 @@
 package com.mycompany.exemplobotao;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 /**
  *
@@ -12,12 +13,14 @@ import java.awt.*;
  */
 public class ExemploBotao extends JFrame{
     JButton botao;
+    ImageIcon icone;
     
     public ExemploBotao(){
         super("Exemplo com JButton");
         Container tela = getContentPane();
         setLayout(null);
-        botao = new JButton("Procurar");
+        icone = new ImageIcon("abrir.gif");
+        botao = new JButton("Abrir",icone);
         botao.setBounds(50, 20, 100, 20);
         tela.add(botao);
         setSize(400, 250);
