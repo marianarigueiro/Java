@@ -3,22 +3,27 @@
  */
 
 package com.mycompany.cadastrodecliente;
+
 import javax.swing.*;
 import java.awt.*;
 
 /**
- *
- * @author Yo
+ * Classe responsável por criar a interface gráfica de cadastro de clientes.
+ * Estende JFrame para criar uma janela e utilizar componentes gráficos.
  */
-public class CadastroDeCliente extends JFrame{
+public class CadastroDeCliente extends JFrame {
+    
+    // Definindo os rótulos e campos de texto que serão utilizados na interface
     JLabel rotulo1, rotulo2, rotulo3, rotulo4, rotulo5, rotulo6, rotulo7;
     JTextField texto1, texto2, texto3, texto4, texto5, texto6, texto7;
     
+    // Construtor da classe, onde a interface é configurada
     public CadastroDeCliente(){
-        super("Cadastro de Clientes");
-        Container tela = getContentPane();
-        setLayout(null);
+        super("Cadastro de Clientes");  // Define o título da janela
+        Container tela = getContentPane();  // Obtém o conteúdo da janela
+        setLayout(null);  // Define o layout como nulo para permitir o posicionamento manual
         
+        // Inicializando os rótulos (labels) para cada campo
         rotulo1 = new JLabel("Nome: ");
         rotulo2 = new JLabel("CPF: ");
         rotulo3 = new JLabel("RG: ");
@@ -27,14 +32,16 @@ public class CadastroDeCliente extends JFrame{
         rotulo6 = new JLabel("Estado: ");
         rotulo7 = new JLabel("CEP: ");
         
-        texto1 = new JTextField(50);
-        texto2 = new JTextField(11);
-        texto3 = new JTextField(9);
-        texto4 = new JTextField(50);
-        texto5 = new JTextField(50);
-        texto6 = new JTextField(50);
-        texto7 = new JTextField(50);
+        // Inicializando os campos de texto para entrada de dados
+        texto1 = new JTextField(50);  // Para o nome do cliente
+        texto2 = new JTextField(11);  // Para o CPF
+        texto3 = new JTextField(9);   // Para o RG
+        texto4 = new JTextField(50);  // Para o endereço
+        texto5 = new JTextField(50);  // Para a cidade
+        texto6 = new JTextField(50);  // Para o estado
+        texto7 = new JTextField(50);  // Para o CEP
         
+        // Definindo a posição e o tamanho dos rótulos e campos de texto na tela
         rotulo1.setBounds(50, 20, 80, 20);
         rotulo2.setBounds(50, 60, 80, 20);
         rotulo3.setBounds(50, 100, 80, 20);
@@ -50,9 +57,8 @@ public class CadastroDeCliente extends JFrame{
         texto5.setBounds(110, 180, 200, 20);
         texto6.setBounds(110, 220, 200, 20);
         texto7.setBounds(110, 260, 200, 20);
-        
-        texto1. requestFocus();
-        
+                
+        // Adicionando os rótulos e campos de texto à tela (janela)
         tela.add(rotulo1);
         tela.add(rotulo2);
         tela.add(rotulo3);
@@ -69,14 +75,16 @@ public class CadastroDeCliente extends JFrame{
         tela.add(texto6);
         tela.add(texto7);
         
+        // Definindo o tamanho da janela, visibilidade e centralizando-a na tela
         setSize(400, 400);
         setVisible(true);
-        setLocationRelativeTo(null);
-        
+        setLocationRelativeTo(null);  // Centraliza a janela na tela
     }
 
+    // Método main para executar a aplicação
     public static void main(String[] args) {
-        CadastroDeCliente app = new CadastroDeCliente();
-        app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        CadastroDeCliente app = new CadastroDeCliente();  // Cria uma instância da janela
+        app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  // Define o comportamento de fechamento da janela
     }
 }
+
